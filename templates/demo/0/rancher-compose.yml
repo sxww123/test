@@ -6,13 +6,13 @@
   minimum_rancher_version: v1.0.0
   maintainer: "Rancher-CN <rancher-cn@outlook.com>"
   questions:
-    - variable: "scale_number"
+    - variable: "JAVA_OPTS"
       description: |
-        Scale Number 
-      label: "Nginx Scale Number:"
+        JVM Parameters
+      label: "JVM Parameters:"
       default: "1"
       required: true
-      type: "int"
+      type: "string"
     - variable: "ext_port"
       description: |
         External Port
@@ -23,7 +23,7 @@
 
 version: '2'
 services:
-  nginx:
+  tomcat:
     scale: $scale_number
     start_on_create: true
   lb:
@@ -35,7 +35,7 @@ services:
       - hostname: ''
         priority: 1
         protocol: tcp
-        service: nginx
+        service: tomcat
         source_port: $ext_port
         target_port: 80
     health_check:

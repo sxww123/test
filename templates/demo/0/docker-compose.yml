@@ -1,6 +1,6 @@
 version: '2'
 services:
-  nginx:
+  tomcat:
     image: tomcat:7
     stdin_open: true
     tty: true
