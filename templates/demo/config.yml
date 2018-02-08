@@ -1,6 +1,6 @@
-name: Catalog Demo
+name: My Super Tomcat
 description: |
-  Demo nginx service
+  Demo tomcat service
 version: 0.1
 category: Demo
 maintainer: community
