@@ -1,8 +1,8 @@
-name: Super Tomcat
+name: Catalog Demo
 description: |
-  My Super Tomcat
+  Demo nginx service
 version: 0.1
-category: Super Tomcat
+category: Demo
 maintainer: community
 license:
 

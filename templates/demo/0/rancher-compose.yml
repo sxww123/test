@@ -1,10 +1,10 @@
 .catalog:
-  name: Super Tomcat
+  name: Demo
   description: |
-	My Super Tomcat
+    (Training) Catalog Demo
   version: 0.1
   minimum_rancher_version: v1.0.0
-  maintainer: "Wei.W1.Wang@pccw.com"
+  maintainer: "Rancher-CN <rancher-cn@outlook.com>"
   questions:
     - variable: "scale_number"
       description: |
@@ -23,7 +23,7 @@
 
 version: '2'
 services:
-  tomcat:
+  nginx:
     scale: $scale_number
     start_on_create: true
   lb:
